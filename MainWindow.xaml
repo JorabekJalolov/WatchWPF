@@ -1,0 +1,29 @@
+﻿<Window x:Class="WatchWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WatchWPF"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        AllowsTransparency="True"
+        Background="Transparent"
+        Loaded="Window_Loaded"
+        Title="MainWindow" Height="200" Width="200">
+    <Border x:Name="DargBorder" MouseDown="DargBorder_MouseDown"  CornerRadius="15">
+        <Grid>
+            <Rectangle RadiusX="15" RadiusY="15">
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="Images/panda.jpg" Stretch="UniformToFill"/>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Border CornerRadius="15" Background="Black" Opacity="0.5" Margin="15"/>
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock x:Name="DateTxt" Text="03.05.1998" Foreground="Snow" HorizontalAlignment="Center"/>
+                <TextBlock x:Name="DayTxt" Text="Monday" Foreground="Snow" HorizontalAlignment="Center"/>
+                <TextBlock x:Name="TimeTxt" Text="20:33" Foreground="Snow" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="50" FontWeight="DemiBold"/>
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>
